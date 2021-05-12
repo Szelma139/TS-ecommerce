@@ -1,13 +1,28 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 
+interface Ivariant {
+    [variant: string]: string;
+}
 
-
- type ButtonProps  = {
-     variant?: keyof {};
-     variantOptions?: {};
+interface IvariantOptions {
+    primary: Ivariant,
+    secondary: Ivariant
+    }
+interface ButtonProps extends IvariantOptions  {
+    variant: keyof IvariantOptions;
+     variantOptions?: IvariantOptions;
      
 }
+
+interface IButtonProps {
+    variant: string;
+    children: React.ReactNode;
+}
+
+export const Button = ({variant,...props}: IButtonProps) => {
+
+
 
 const StyledButton = styled.button<ButtonProps>`
 
@@ -26,11 +41,7 @@ background-color: ${variantOptions[variant].backgroundColor};
 `}
 `;
 
-interface IvariantOptions {
-    primary: {},
-    secondary: {}
-    
-    }
+
 const variantOptions: IvariantOptions = {
         
     primary: {
@@ -41,15 +52,8 @@ const variantOptions: IvariantOptions = {
 
     }
 }
-
-
-
-export const Button = () => {
-
-
    
     return (
-        <StyledButton>
-        </StyledButton>
+        <StyledButton variant={props.variant}/>
     )
 }

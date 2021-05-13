@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
+
 
 interface Ivariant {
     [variant: string]: string;
@@ -8,23 +9,37 @@ interface Ivariant {
 interface IvariantOptions {
     primary: Ivariant,
     secondary: Ivariant
-    }
-interface ButtonProps extends IvariantOptions  {
-    variant: keyof IvariantOptions;
-     variantOptions?: IvariantOptions;
-     
+}
+
+
+interface IKey {
+    [key: string]: string;
+}
+
+interface ITheme {
+    [key: string]: IKey;
 }
 
 interface IButtonProps {
-    variant: string;
-    children: React.ReactNode;
+    variant?: keyof IvariantOptions;
+    children?: React.ReactNode | string;
+    theme?: ITheme;
 }
 
-export const Button = ({variant,...props}: IButtonProps) => {
+export const Button = ({ variant = "primary", children, theme, ...props }: IButtonProps) => {
+
+    // let bp: IButtonProps = {
+
+    // }
 
 
+    interface ButtonProps {
+        variant: keyof IvariantOptions;
+        variantOptions?: IvariantOptions;
 
-const StyledButton = styled.button<ButtonProps>`
+    }
+
+    const StyledButton = styled.button<ButtonProps>`
 
 padding: 10px 20px;
 outline: none;
@@ -32,28 +47,31 @@ outline: none;
     cursor: pointer
 }
 
-${({ variant }) => 
-    variant &&
-    variantOptions[variant] &&
-    css`
+${({ variant }) =>
+            variant &&
+            variantOptions[variant] &&
+            css`
 background-color: ${variantOptions[variant].backgroundColor};
 
 `}
 `;
 
 
-const variantOptions: IvariantOptions = {
-        
-    primary: {
-        backgroundColor: props.theme.colors.primary,
-    },
-    secondary: {
-        backgroundColor: props.theme.colors.secondary,
+    const variantOptions: IvariantOptions = {
 
+        primary: {
+            backgroundColor: theme?.colors.blue || '',
+        },
+        secondary: {
+            backgroundColor: theme?.colors.lightblue || '',
+
+        }
     }
-}
-   
+
     return (
-        <StyledButton variant={props.variant}/>
+        <StyledButton variant={variant}>
+            {   children}
+     {console.log("asdas"+theme?.colors)}
+        </StyledButton>
     )
 }

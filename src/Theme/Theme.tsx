@@ -1,6 +1,12 @@
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { ThemeProvider, DefaultTheme } from "styled-components";
 
-const theme = {
+interface Ivariant {
+  [variant: string]: string;
+}
+
+
+
+export const theme = {
     colors: {
       blue: "#458FF6",
     lightblue: "4089ED",

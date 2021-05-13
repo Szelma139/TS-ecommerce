@@ -21,7 +21,13 @@ function App() {
       asdasds
       {/* <Button variant="primary" /> */}
       {/* <Button variant="secondary" /> */}
-        <Button />
+        <Button variant="primary">
+          Agata
+        </Button>
+        <Button variant="secondary">
+          Agata
+        </Button>
+   
         </Theme>
     </div>
   );

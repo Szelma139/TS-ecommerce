@@ -9,10 +9,11 @@ interface Ivariant {
 export const theme = {
     colors: {
       blue: "#458FF6",
-    lightblue: "4089ED",
+    lightblue: "#4089ED",
       gray: "#7D7987",
       black: "#000000",
-      white: "#FFFFFF"
+      white: "#FFFFFF",
+      
       
     },
     gradient: {

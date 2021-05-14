@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, useTheme } from 'styled-components';
 
 
 interface Ivariant {
@@ -26,7 +26,8 @@ interface IButtonProps {
     theme?: ITheme;
 }
 
-export const Button = ({ variant = "primary", children, theme, ...props }: IButtonProps) => {
+export const Button = ({ variant = "primary", children, ...props }: IButtonProps) => {
+    const theme = useTheme();
 
     // let bp: IButtonProps = {
 
@@ -71,7 +72,7 @@ background-color: ${variantOptions[variant].backgroundColor};
     return (
         <StyledButton variant={variant}>
             {   children}
-     {console.log("asdas"+theme?.colors)}
+            {console.log("asdas" + theme?.colors)}
         </StyledButton>
     )
 }

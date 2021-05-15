@@ -25,7 +25,6 @@ interface IStyledHeading {
 const Heading = styled.h2<IStyledHeading>`
 color: ${(props) => props.theme.colors.black};
 
-}}
 ${({ size,variantOptions }) =>
 size &&
 variantOptions &&

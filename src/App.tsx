@@ -1,10 +1,8 @@
 import React from "react";
 import "./App.css";
-import { Button } from "./SmallComponents/Button";
 
 import { createGlobalStyle } from "styled-components";
 import { Theme } from "./Theme/Theme";
-import { HeadingText } from "./SmallComponents/HeadingText";
 
 import OurServices from "./sections/OurServices";
 

@@ -33,8 +33,11 @@ const OurServices = () => {
     return (
       <Wrapper>
         <HeadingText>Our Services</HeadingText>
-        <LineDecorator />
-        <ParagraphText>
+        <LineDecorator 
+        />
+              <LineDecorator color="white"
+        />
+        <ParagraphText >
         We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health
         </ParagraphText>
         <CardsGrid>

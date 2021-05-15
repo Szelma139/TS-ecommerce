@@ -1,5 +1,4 @@
-import React from "react";
-import styled, {css, useTheme} from "styled-components";
+import styled from "styled-components";
 
 interface Props {
   children?: string;

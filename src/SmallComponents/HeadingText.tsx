@@ -52,7 +52,7 @@ export const HeadingText = ({ className="",children = "test", size = "medium" }:
 
  
 
-  return <Heading variantOptions={variantOptions} size={size}>
+  return <Heading className={className} variantOptions={variantOptions} size={size}>
       
       {children}</Heading>;
 };

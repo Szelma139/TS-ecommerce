@@ -26,7 +26,7 @@ const Image = styled.img`
 
 export const ServiceCard = ({className="",source="../SVG/ArrowDown.svg", paragraphText="This might be your text paragraph", title="Title"}:Props) => {
     return (
-        <Card>
+        <Card className={className}>
          <Image src={source}/>  
          <HeadingText size="small">{title}</HeadingText>
          <ParagraphText>{paragraphText}</ParagraphText>

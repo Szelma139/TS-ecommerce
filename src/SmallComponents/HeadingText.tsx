@@ -14,6 +14,7 @@ interface IvariantOptions {
 interface Props {
   children?: React.ReactNode | string;
   size?: keyof IvariantOptions;
+  className?:string;
 }
 
 interface IStyledHeading {
@@ -21,7 +22,20 @@ interface IStyledHeading {
   variantOptions?: IvariantOptions;
 }
 
-export const HeadingText = ({ children = "test", size = "medium" }: Props) => {
+const Heading = styled.h2<IStyledHeading>`
+color: ${(props) => props.theme.colors.black};
+
+}}
+${({ size,variantOptions }) =>
+size &&
+variantOptions &&
+variantOptions[size] &&
+css`
+font-size: ${variantOptions[size].fontSize};
+`}
+`;
+
+export const HeadingText = ({ className="",children = "test", size = "medium" }: Props) => {
   const theme = useTheme();
 
   const variantOptions: IvariantOptions = {
@@ -36,19 +50,9 @@ export const HeadingText = ({ children = "test", size = "medium" }: Props) => {
     },
   };
 
-  const Heading = styled.h2<IStyledHeading>`
-    color: ${(props) => props.theme.colors.black};
+ 
 
-
-${({ size }) =>
-  size &&
-  variantOptions[size] &&
-  css`
-    font-size: ${variantOptions[size].fontSize};
-  `}
-`;
-
-  return <Heading size={size}>
+  return <Heading variantOptions={variantOptions} size={size}>
       
       {children}</Heading>;
 };

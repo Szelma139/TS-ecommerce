@@ -18,6 +18,7 @@ const Wrapper = styled.div`
 text-align:center;
 width: 80%;
 margin: 2em auto;
+
 `;
 
 const CardsGrid = styled.div`
@@ -33,10 +34,7 @@ const OurServices = () => {
     return (
       <Wrapper>
         <HeadingText>Our Services</HeadingText>
-        <LineDecorator 
-        />
-              <LineDecorator color="white"
-        />
+        <LineDecorator />
         <ParagraphText >
         We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health
         </ParagraphText>

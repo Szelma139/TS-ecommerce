@@ -88,7 +88,8 @@ export const Button = ({
   return (
     <StyledButton variant={variant}>
       {children}
-      {withIcon ? <img src={ArrowDown} alt="arrow pointing down" /> : null}
+      {withIcon ?
+       (<img src={ArrowDown} alt="arrow pointing down" />) : (null)}
     </StyledButton>
   );
 };

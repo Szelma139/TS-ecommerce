@@ -36,6 +36,7 @@ interface Props {
 
 const Wrapper = styled.div`
 width: 100%;
+
 `;
 
 const Line = styled.div<SProps>`
@@ -43,7 +44,7 @@ border-bottom: 2px solid black;
 width: 56px;
 border-radius:5%;
 
-${({align, alignement, color, colors}) => 
+${({align, alignement, colors, color}) => 
 align &&
 alignement &&
 alignement[align] &&
@@ -52,7 +53,7 @@ colors &&
 colors[color] &&
 css`
 margin: ${alignement[align].direction};
-border-bottom: 10px solid ${colors?[color].color};
+border-bottom: 2px solid ${colors[color].color};
 `}
 
 `;
@@ -76,10 +77,10 @@ export const LineDecorator = ({align="center", color="black", className=""}:Prop
 
     const colors:IColors = {
         black:{
-            color:"black"
+            color:"black" || ""
         },
         white: {
-            color:"#fff"
+            color:"#fff" || ""
         }
     };
 

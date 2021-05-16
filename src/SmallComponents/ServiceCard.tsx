@@ -17,10 +17,12 @@ background: ${props=>props.theme.colors.white};
 padding:2em;
 box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
 border-radius: 20px;
+text-align:left;
 `;
 
 
 const Image = styled.img`
+height: 95px;
 `;
 
 

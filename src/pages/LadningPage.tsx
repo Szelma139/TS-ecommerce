@@ -5,14 +5,24 @@ import { Navbar } from '../sections/Navbar'
 import OurServices from '../sections/OurServices'
 import { VirtualHealthcare } from '../sections/VirtualHealthcare'
 
+import styled from 'styled-components';
+
+const MarginControl = styled.div`
+
+&>*{
+    margin-top: 2em;
+}
+
+`;
+
 export const LadningPage = () => {
     return (
-        <div>
+        <MarginControl>
             <Navbar/>
             <VirtualHealthcare/>
             <CheckLatest/>
            <OurServices/> 
            <CustomersSaying/>
-        </div>
+        </MarginControl>
     )
 }

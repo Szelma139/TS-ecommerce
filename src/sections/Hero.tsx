@@ -6,6 +6,7 @@ import { ParagraphText } from '../SmallComponents/ParagraphText';
 
 
 import { IvariantOptions} from '../SmallComponents/Button';
+import { LineDecorator } from '../SmallComponents/LineDecorator';
 
 const Container = styled.div`
 margin:4em auto;
@@ -13,7 +14,7 @@ width: 80%;
 display: flex;
 flex-direction: row;
 align-items: center;
-justify-content: space-between;
+justify-content: space-around;
 
 
 @media(max-width: 800px){
@@ -24,12 +25,16 @@ justify-content: space-between;
 
 const Image = styled.img`
 max-width: 100%;
-flex: 0.5;
+
 
 `;
 
 const Wrapper = styled.div`
-flex:0.5;
+max-width:450px;
+
+&>* {
+    margin-top: 1.5em;
+}
 @media(max-width: 800px){
     margin: 0 auto;}
 
@@ -42,16 +47,18 @@ interface Props {
     title?:string;
     text?:string;
     buttonText?:string;
+    lineDecorator?:boolean;
 }
 
 
-export const Hero = ({source="", title="",text="",buttonVariant="primary", buttonText=""}: Props) => {
+export const Hero = ({source="", title="",lineDecorator=false,text="",buttonVariant="primary", buttonText=""}: Props) => {
     return (
         <Container>
             <Wrapper>
-                <HeadingText>
+                <HeadingText size="big">
                     {title}
                 </HeadingText>
+                {lineDecorator && <LineDecorator align="left"/>}
                 <ParagraphText>
                     {text}
                 </ParagraphText>

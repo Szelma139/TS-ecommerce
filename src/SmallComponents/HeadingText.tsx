@@ -6,6 +6,7 @@ interface IKey {
 }
 
 interface IvariantOptions {
+  smaller: IKey;
   small: IKey;
   medium: IKey;
   big: IKey;
@@ -38,6 +39,9 @@ export const HeadingText = ({ className="",children = "test", size = "medium" }:
   const theme = useTheme();
 
   const variantOptions: IvariantOptions = {
+    smaller: {
+      fontSize: theme?.fontSize.smaller || ""
+    },
     small: {
       fontSize: theme?.fontSize.small || "",
     },

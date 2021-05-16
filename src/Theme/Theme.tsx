@@ -19,6 +19,7 @@ export const theme = {
       border55px: "55px",
     },
     fontSize: {
+      smaller: "21px",
       small: "24px",
       medium: "36px",
       big: "48px"

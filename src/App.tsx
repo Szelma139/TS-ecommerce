@@ -5,6 +5,7 @@ import { createGlobalStyle } from "styled-components";
 import { Theme } from "./Theme/Theme";
 
 import OurServices from "./sections/OurServices";
+import { LadningPage } from "./pages/LadningPage";
 
 
 const GlobalStyles = createGlobalStyle`
@@ -22,7 +23,7 @@ function App() {
     <div>
       <Theme>
         <GlobalStyles />
-        <OurServices/>
+      <LadningPage/>
       </Theme>
     </div>
   );

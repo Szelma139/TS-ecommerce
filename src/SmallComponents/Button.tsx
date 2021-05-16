@@ -6,7 +6,7 @@ interface Ivariant {
   [variant: string]: string;
 }
 
-interface IvariantOptions {
+ export interface IvariantOptions {
   primary: Ivariant;
   secondary: Ivariant;
 }

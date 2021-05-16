@@ -15,6 +15,7 @@ width: 80%;
 margin: 2em auto 3em auto;
 text-align: center;
 position:relative;
+
 @media(max-width:550px){
    width: 90%;
    margin: 2em auto 3em auto;

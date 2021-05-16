@@ -12,22 +12,34 @@ import TrackingCard from '../SVG/TrackingCard.svg';
 import styled from 'styled-components';
 import { ParagraphText } from '../SmallComponents/ParagraphText';
 import { Button } from '../SmallComponents/Button';
+import DotsGrid from '../SVG/DotsGrid.svg';
 
 
 const Wrapper = styled.div`
 text-align:center;
 width: 80%;
 margin: 2em auto;
+position: relative;
 
 `;
+
+const StyledGrid = styled.img`
+position:absolute;
+right: -5%;
+top:48%;
+z-index:-111;
+`
 
 const CardsGrid = styled.div`
 width: 100%;
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+grid-auto-rows: min-content;
 grid-gap: 25px;
-margin-bottom: 3em;
-margin-top: 2em;
+
+margin:2em auto 3em auto;
+
+
 `;
 
 const OurServices = () => {
@@ -74,6 +86,7 @@ const OurServices = () => {
         <Button variant="secondary">
             Learn more
         </Button>
+        <StyledGrid src={DotsGrid}/>
       </Wrapper>
     );
 }

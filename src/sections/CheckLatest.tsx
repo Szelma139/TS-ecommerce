@@ -19,9 +19,8 @@ const Wrapper = styled.div`
 const CardsGrid = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 2fr));
-  margin-bottom: 3em;
-  margin-top: 3em;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 2fr));
+  margin: 3em auto;
   grid-gap:10px;
 `;
 

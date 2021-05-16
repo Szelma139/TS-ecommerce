@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
 *{
   box-sizing: border-box;
   font-family: 'Mulish', sans-serif;
+  
 }
 `;
 

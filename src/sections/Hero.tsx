@@ -24,7 +24,7 @@ justify-content: space-around;
 
 
 const Image = styled.img`
-max-width: 100%;
+max-width: 80%;
 
 
 `;
@@ -38,6 +38,10 @@ max-width:450px;
 @media(max-width: 800px){
     margin: 0 auto;}
 
+    &>*{
+        width:100%;
+        margin: 1em auto;
+    }
 
 `;
 

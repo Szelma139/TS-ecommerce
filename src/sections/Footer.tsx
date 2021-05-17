@@ -61,27 +61,27 @@ export const Footer = () => {
           </Info>
           <Links>
               <Menu>
-                  <a>Company</a>
-                  <a>About</a>
-                  <a>Testimonials</a>
-                  <a>Find a doctor</a>
-                  <a>Apps</a>
+                  <a href="http://interia.pl">Company</a>
+                  <a href="http://interia.pl">About</a>
+                  <a href="http://interia.pl">Testimonials</a>
+                  <a href="http://interia.pl">Find a doctor</a>
+                  <a href="http://interia.pl">Apps</a>
               </Menu>
 
               <Menu>
-                  <a>Region</a>
-                  <a>Indonesia</a>
-                  <a>Singapore</a>
-                  <a>Hongkong</a>
-                  <a>Canada</a>
+                  <a href="http://interia.pl">Region</a>
+                  <a href="http://interia.pl" >Indonesia</a>
+                  <a href="http://interia.pl" >Singapore</a>
+                  <a href="http://interia.pl">Hongkong</a>
+                  <a href="http://interia.pl">Canada</a>
               </Menu>
 
               <Menu>
-                  <a>Help</a>
-                  <a>Help center</a>
-                  <a>Contact support</a>
-                  <a>Instructions</a>
-                  <a>How it works</a>
+                  <a href="http://interia.pl">Help</a>
+                  <a href="http://interia.pl">Help center</a>
+                  <a href="http://interia.pl">Contact support</a>
+                  <a href="http://interia.pl">Instructions</a>
+                  <a href="http://interia.pl">How it works</a>
               </Menu>
              
           </Links>

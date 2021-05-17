@@ -4,7 +4,6 @@ import "./App.css";
 import { createGlobalStyle } from "styled-components";
 import { Theme } from "./Theme/Theme";
 
-import OurServices from "./sections/OurServices";
 import { LadningPage } from "./pages/LadningPage";
 
 

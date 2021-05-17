@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { HeadingText } from '../SmallComponents/HeadingText';
 import { LineDecorator } from '../SmallComponents/LineDecorator';
 import { ParagraphText } from '../SmallComponents/ParagraphText';
-import DotsGrid from '../SVG/DotsGrid.svg';
 
 import EdwardProfile from '../SVG/EdwardProfile.svg';
 

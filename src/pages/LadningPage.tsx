@@ -6,6 +6,7 @@ import OurServices from '../sections/OurServices'
 import { VirtualHealthcare } from '../sections/VirtualHealthcare'
 
 import styled from 'styled-components';
+import { Footer } from '../sections/Footer'
 
 const MarginControl = styled.div`
 
@@ -22,7 +23,8 @@ export const LadningPage = () => {
             <VirtualHealthcare/>
             <CheckLatest/>
            <OurServices/> 
-           <CustomersSaying/>
+            <CustomersSaying />
+            <Footer/>
         </MarginControl>
     )
 }

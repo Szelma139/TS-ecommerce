@@ -41,6 +41,8 @@ flex-direction: column;
   &>* {
       margin-bottom: 0.4em;
       cursor: pointer;
+      text-decoration: none;
+      color: #fff;
   }
 
   &>*:hover {

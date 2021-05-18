@@ -6,7 +6,11 @@ Most stuff should be customizable.
 
 Overall Ts convention applied by me is like this:
 
-interface Props {} - functional component Props
-interface IKey {} keys of  variant object
-interface Ivariant = variant object which can apply primary/secondary etc like bootstrap does
-interface SProps {} - props for styled component
+interface Props {} - functional component Props 
+
+interface IKey {} keys of  variant object 
+
+interface Ivariant = variant object which can apply primary/secondary etc like bootstrap does 
+
+interface SProps {} - props for styled component 
+

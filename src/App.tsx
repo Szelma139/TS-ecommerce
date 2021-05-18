@@ -1,34 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Button } from './SmallComponents/Button';
+import React from "react";
+import "./App.css";
 
 import { createGlobalStyle } from "styled-components";
-import { Theme } from './Theme/Theme';
+import { Theme } from "./Theme/Theme";
+
+import { LadningPage } from "./pages/LadningPage";
+
 
 const GlobalStyles = createGlobalStyle`
-box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+  
+}
 `;
+
 
 
 function App() {
   return (
     <div>
       <Theme>
-
-  
-      <GlobalStyles/>
-      asdasds
-      {/* <Button variant="primary" /> */}
-      {/* <Button variant="secondary" /> */}
-        <Button variant="primary">
-          Agata
-        </Button>
-        <Button variant="secondary">
-          Agata
-        </Button>
-   
-        </Theme>
+        <GlobalStyles />
+      <LadningPage/>
+      </Theme>
     </div>
   );
 }

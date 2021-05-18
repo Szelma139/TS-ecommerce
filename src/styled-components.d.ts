@@ -8,5 +8,7 @@ declare module 'styled-components' {
   export interface DefaultTheme {
      colors: objectKey;
      gradient:objectKey;
+     borderRadius:objectKey;
+     fontSize: objectKey;
   }
 }
